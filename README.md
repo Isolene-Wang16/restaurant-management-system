@@ -22,11 +22,31 @@ This modular system enables restaurant staff to create orders, update order stat
 ## Project Structure
 ```
 restaurant/
-├── manager/        # Core business logic modules
+├── entity/                # Entity classes: model objects
+│   ├── Admin.java
+│   ├── Chef.java
+│   ├── ColdDish.java
+│   ├── HotDish.java
+│   ├── MenuItem.java
+│   ├── Order.java
+│   ├── OrderLine.java
+│   ├── OrderStatus.java
+│   ├── User.java
+│   └── UserRole.java
+├── exception/             # Custom defined exceptions
+│   ├── InvalidStatusException.java
+│   └── OrderNotFoundException.java
+├── gui/                   # Program entry point
+│   └── Main.java
+├── manager/               # Business logic & service layer
+│   ├── AppContext.java
+│   ├── MenuManager.java
+│   ├── OrderManageable.java
+│   ├── OrderManager.java
 │   ├── ReportGenerator.java
 │   ├── TimeoutChecker.java
 │   └── UserManager.java
-└── util/           # Helper and file utility classes
+└── util/                  # Helper & file I/O utilities
 └── FileUtil.java
 ```
 
